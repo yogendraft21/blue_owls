@@ -1,31 +1,35 @@
 # python-fastAPI-mysql
 
-A simple FastAPI project with MySQL database connection
+Backend for Patient Appointment system
 
 ## Usage
 
-Clone the project and follow the steps below
-```
-python3
+Clone the project and follow the steps below:
 
-# create a virtual environment
+```bash
+# Create a virtual environment
 python3 -m venv venv
 
-# activate the virtual environment
-. venv/bin/activate
+# Activate the virtual environment
+source venv/bin/activate
 
-# install the required packages inside venv
+# Install the required packages inside venv
 pip3 install -r requirements.txt
 
-# if you need to upgrade pip for package compatibility please run the command below
-# and install the require package again
+# If you need to upgrade pip for package compatibility, please run the command below
+# and install the required packages again
 pip3 install --upgrade pip
 
-# run the project with uvicorn autoreload to watch the file changes
+# Export environment variables (replace placeholders with actual values)
+export DB_URL="mysql+pymysql://username:password@localhost/database_name"
+export STRIPE_SECRET="your_stripe_secret_key"
+export STRIPE_WEBHOOK="your_stripe_webhook_secret"
+
+# Ensure that your MySQL database is created
+# If not, create the database using your preferred MySQL client
+
+# Run the project with uvicorn autoreload to watch for file changes
 uvicorn main:app --reload
 
-# deactivate the virtual environment
+# Deactivate the virtual environment when done
 deactivate
-```
-Access the swagger API docs
-http://localhost:8000/docs
