@@ -28,6 +28,9 @@ export STRIPE_WEBHOOK="your_stripe_webhook_secret"
 # We are using Stripe Transaction in INR so use this card number
 4000 0035 6000 0008
 
+# Open one more terminal listen for stripe webhook and paste this
+stripe listen --forward-to 127.0.0.1:8000/webhook
+
 # Ensure that your MySQL database is created
 # If not, create the database using your preferred MySQL client
 
