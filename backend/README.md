@@ -25,6 +25,9 @@ export DB_URL="mysql+pymysql://username:password@localhost/database_name"
 export STRIPE_SECRET="your_stripe_secret_key"
 export STRIPE_WEBHOOK="your_stripe_webhook_secret"
 
+# We are using Stripe Transaction in INR so use this card number
+4000 0035 6000 0008
+
 # Ensure that your MySQL database is created
 # If not, create the database using your preferred MySQL client
 
